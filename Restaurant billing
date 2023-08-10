@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+
+
+public class Resturent_bill {
+    public static void main(String[] args){
+    System.out.println("##Foodie##");
+    System.out.println("Enter the Number of food items");
+    Scanner sc=new Scanner(System.in);
+    int food=sc.nextInt();
+    
+    String[]name=new String[food];
+    Scanner scname=new Scanner(System.in);
+
+    int[]price =new int[food];
+    Scanner scprice=new Scanner(System.in);
+   
+    int totalExpenses=0;
+for(int i=0;i<food;i++){
+    System.out.println("Name:");
+     name[i]=sc.next();
+     System.out.println("Enter the cost RS:");
+     price[i]=sc.nextInt();
+     
+     totalExpenses +=price[i];
+     
+      
+
+
+     
+     
+    }
+  
+System.out.println("food") ;
+
+System.out.println("Total Price Rs:"+totalExpenses);
+    
+    }
+}
