@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class Main {
+    int num[];
+    int totalnumber;
+    Scanner sc;
+
+    public void number() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the total number");
+        totalnumber = sc.nextInt();
+        num = new int[totalnumber];
+        for (int i = 0; i < totalnumber; i++) {
+            System.out.println("Enter the number");
+            num[i] = sc.nextInt();
+        }
+    }
+
+    public void positive() {
+        for (int i = 0; i < totalnumber; i++) {
+            if (num[i] > 0) {
+                System.out.println("Positive number: " + num[i]);
+            }
+        }
+    }
+    public void negitive() {
+        for (int i = 0; i < totalnumber; i++) {
+            if (num[i] < 0) {
+                System.out.println("Negative number: " + num[i]);
+            }
+        }
+    }
+    public void even() {
+        for (int i = 0; i < totalnumber; i++) {
+            if ((num[i]%2) == 0) {
+                System.out.println("even: " + num[i]);
+            }
+        }
+    }
+    public void odd() {
+        for (int i = 0; i < totalnumber; i++) {
+            if ((num[i]%2) != 0) {
+                System.out.println("odd: " + num[i]);
+            }
+        }
+    }
+    public void zero() {
+        for (int i = 0; i < totalnumber; i++) {
+            if (num[i] == 0) {
+                i++;
+                System.out.println("Zero: " + num[i++]);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Main rr = new Main();
+        rr.number();
+        rr.positive();
+        rr.negitive();
+        rr.even();
+        rr.odd();
+        rr.zero();
+    }
+}
